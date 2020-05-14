@@ -1,0 +1,83 @@
+// Consent list component variables
+$consent-list-box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+$consent-list-item-bg-color: $border-bg-color;
+$consent-list-item-closing-transition: 200ms ease-out;
+$consent-list-item-fg-color: $fg-color;
+
+/* Consent list component prototype */
+ul.consent-list {
+	bottom: 0;
+	box-shadow: $consent-list-box-shadow;
+	left: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+	position: fixed;
+	width: 100%;
+
+	> li.consent-list-item {
+		background-color: $consent-list-item-bg-color;
+		border-bottom: 1px solid $border-color;
+		color: $consent-list-item-fg-color;
+		display: none;
+		padding: ($box-padding * 0.75) 0;
+		position: relative;
+		transition: opacity $consent-list-item-closing-transition;
+
+		> div.container {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+		}
+
+		p, ul.consent-list-item-buttons {
+			margin-bottom: 0;
+		}
+
+		ul.consent-list-item-buttons {
+			display: flex;
+			justify-content: center;
+			list-style: none;
+			margin-left: ($box-padding * -0.5);
+			padding-left: 0;
+
+			> li {
+				padding-left: ($box-padding * 0.5);
+
+				> a.button, > button.button {
+					width: 100%;
+				}
+			}
+		}
+
+		&.is-visible {
+			display: block;
+		}
+
+		&.is-closing {
+			opacity: 0;
+		}
+
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+
+	@include breakpoint('small') {
+
+		> li.consent-list-item {
+			text-align: center;
+
+			> div.container {
+				display: block;
+			}
+
+			p {
+				margin-bottom: ($box-padding * 0.75);
+			}
+		}
+	}
+}
+
+/* Consent list component extensions */
+ul.consent-list {
+}
