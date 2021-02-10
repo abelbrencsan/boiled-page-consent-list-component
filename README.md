@@ -31,20 +31,26 @@ The following example shows a cookie consent.
 <ul class="consent-list">
 
   <!-- Cookie consent -->
-  <li class="consent-list-item" data-consent="cookie-consent">
+  <li class="consent-list-item is-visible" data-consent="cookie-consent">
     <div class="container">
-      <p>This website uses cookies to ensure you get the best experience. Please read our <a href="#">privacy policy</a> for more details.</p>
-      <ul class="consent-list-item-buttons">
-        <li>
-          <button class="button" data-consent-dismiss>Dismiss</button>
-        </li>
-        <li>
-          <button class="button" data-consent-accept>Accept</button>
-        </li>
-      </ul>
+      <div class="grid grid--gutter grid--middle">
+        <div class="grid-col grid-col--fit grid-col--small--full">
+          <p>This website uses cookies to ensure you get the best experience. Please read our <a href="#">privacy policy</a> for more details.</p>
+        </div>
+        <div class="grid-col grid-col--small--full">
+          <ul class="consent-list-item-buttons grid grid--gutter grid--gutter--half grid--uniform">
+            <li class="grid-col">
+              <button class="button" data-consent-dismiss>Dismiss</button>
+            </li>
+            <li class="grid-col">
+              <button class="button" data-consent-accept>Accept</button>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </li>
-
+  
 </ul>
 ```
 

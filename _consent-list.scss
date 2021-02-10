@@ -23,30 +23,8 @@ ul.consent-list {
 		position: relative;
 		transition: opacity $consent-list-item-closing-transition;
 
-		> div.container {
-			align-items: center;
-			display: flex;
-			justify-content: space-between;
-		}
-
 		p, ul.consent-list-item-buttons {
 			margin-bottom: 0;
-		}
-
-		ul.consent-list-item-buttons {
-			display: flex;
-			justify-content: center;
-			list-style: none;
-			margin-left: ($box-padding * -0.5);
-			padding-left: 0;
-
-			> li {
-				padding-left: ($box-padding * 0.5);
-
-				> a.button, > button.button {
-					width: 100%;
-				}
-			}
 		}
 
 		&.is-visible {
@@ -67,12 +45,12 @@ ul.consent-list {
 		> li.consent-list-item {
 			text-align: center;
 
-			> div.container {
-				display: block;
-			}
-
 			p {
 				margin-bottom: ($box-padding * 0.75);
+			}
+
+			ul.consent-list-item-buttons {
+				justify-content: center;
 			}
 		}
 	}
