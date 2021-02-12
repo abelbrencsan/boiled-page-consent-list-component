@@ -23,7 +23,7 @@ ul.consent-list {
 		position: relative;
 		transition: opacity $consent-list-item-closing-transition;
 
-		p, ul.consent-list-item-buttons {
+		p, ul.consent-list-item-buttons.grid {
 			margin-bottom: 0;
 		}
 
@@ -49,7 +49,7 @@ ul.consent-list {
 				margin-bottom: ($box-padding * 0.75);
 			}
 
-			ul.consent-list-item-buttons {
+			ul.consent-list-item-buttons.grid {
 				justify-content: center;
 			}
 		}
