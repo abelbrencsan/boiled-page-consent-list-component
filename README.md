@@ -18,7 +18,7 @@ Class name | Description | Example
 ---------- | ----------- | -------
 `consent-list` | Applies a consent list. | `<ul class="consent-list"></ul>`
 `consent-list-item` | Applies a consent list item. | `<li class="consent-list-item"></li>`
-`consent-list-item-buttons` | Applies a consent list item. | `<ul class="consent-list-item-buttons"></ul>`
+`consent-list-item-button-list` | Applies a list of buttons inside consent list item. Use grid component for alignment. | `<ul class="consent-list-item-button-list grid"></ul>`
 
 #### Examples
 
@@ -27,7 +27,7 @@ Class name | Description | Example
 The following example shows a cookie consent.
 
 ```html
-<!-- Consents -->
+<!-- Consent list -->
 <ul class="consent-list">
 
   <!-- Cookie consent -->
@@ -38,7 +38,7 @@ The following example shows a cookie consent.
           <p>This website uses cookies to ensure you get the best experience. Please read our <a href="#">privacy policy</a> for more details.</p>
         </div>
         <div class="grid-col grid-col--small--full">
-          <ul class="consent-list-item-buttons grid grid--gutter grid--gutter--half grid--uniform">
+          <ul class="consent-list-item-button-list grid grid--gutter grid--gutter--half grid--uniform grid--center">
             <li class="grid-col">
               <button class="button" data-consent-dismiss>Dismiss</button>
             </li>
