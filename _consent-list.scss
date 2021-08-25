@@ -23,12 +23,28 @@ ul.consent-list {
 		position: relative;
 		transition: opacity $consent-list-item-closing-transition;
 
-		p, ul.consent-list-item-button-list.grid {
-			margin-bottom: 0;
+		div.consent-list-item-text {
+			align-items: center;
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: center;
+
+			p, ul.consent-list-item-text-button-list.grid {
+				margin-bottom: 0;
+			}
+
+			p {
+				flex: 1;
+				padding-right: ($grid-gutter * 0.5);
+			}
+
+			ul.consent-list-item-text-button-list.grid {
+				flex: 0 1 auto;
+			}
 		}
 
 		&.is-visible {
-			display: block;
+			display: flex;
 		}
 
 		&.is-closing {
@@ -43,10 +59,18 @@ ul.consent-list {
 	@include breakpoint('small') {
 
 		> li.consent-list-item {
-			text-align: center;
 
-			p {
-				margin-bottom: ($box-padding * 0.75);
+			div.consent-list-item-text {
+				text-align: center;
+
+				p, ul.consent-list-item-text-button-list.grid {
+					flex: 0 0 100%;
+					max-width: 100%;
+				}
+
+				p {
+					margin-bottom: ($box-padding * 0.75);
+				}
 			}
 		}
 	}

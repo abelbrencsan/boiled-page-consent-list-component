@@ -18,7 +18,8 @@ Class name | Description | Example
 ---------- | ----------- | -------
 `consent-list` | Applies a consent list. | `<ul class="consent-list"></ul>`
 `consent-list-item` | Applies a consent list item. | `<li class="consent-list-item"></li>`
-`consent-list-item-button-list` | Applies a list of buttons inside consent list item. Use grid component for alignment. | `<ul class="consent-list-item-button-list grid"></ul>`
+`consent-list-item-text` | Applies text inside a consent list item. | `<div class="consent-list-item-text"></div>`
+`consent-list-item-text-button-list` | Applies a list of buttons inside consent list item text. Grid component is used for alignment. | `<ul class="consent-list-item-text-button-list grid"></ul>`
 
 #### Examples
 
@@ -33,20 +34,16 @@ The following example shows a cookie consent.
   <!-- Cookie consent -->
   <li class="consent-list-item is-visible" data-consent="cookie-consent">
     <div class="container">
-      <div class="grid grid--gutter grid--middle">
-        <div class="grid-col grid-col--fit grid-col--small--full">
-          <p>This website uses cookies to ensure you get the best experience. Please read our <a href="#">privacy policy</a> for more details.</p>
-        </div>
-        <div class="grid-col grid-col--small--full">
-          <ul class="consent-list-item-button-list grid grid--gutter grid--gutter--half grid--uniform grid--center">
-            <li class="grid-col">
-              <button class="button" data-consent-dismiss>Dismiss</button>
-            </li>
-            <li class="grid-col">
-              <button class="button" data-consent-accept>Accept</button>
-            </li>
-          </ul>
-        </div>
+      <div class="consent-list-item-text">
+        <p>This website uses cookies to ensure you get the best experience. Please read our <a href="#">privacy policy</a> for more details.</p>
+        <ul class="consent-list-item-text-button-list grid grid--gutter grid--gutter--half grid--uniform grid--center">
+          <li class="grid-col">
+            <button class="button" data-consent-dismiss>Dismiss</button>
+          </li>
+          <li class="grid-col">
+            <button class="button" data-consent-accept>Accept</button>
+          </li>
+        </ul>
       </div>
     </div>
   </li>
