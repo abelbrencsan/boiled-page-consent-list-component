@@ -32,7 +32,7 @@ The following example shows a cookie consent.
 <ul class="consent-list">
 
   <!-- Cookie consent -->
-  <li class="consent-list-item is-visible" data-consent="cookie-consent">
+  <li class="consent-list-item" data-consent="cookie-consent">
     <div class="container">
       <div class="consent-list-item-text">
         <p>This website uses cookies to ensure you get the best experience. Please read our <a href="#">privacy policy</a> for more details.</p>
